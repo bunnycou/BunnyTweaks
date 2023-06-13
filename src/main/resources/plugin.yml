@@ -1,0 +1,4 @@
+name: BunnyTweaks
+version: '${project.version}'
+main: net.cottoncarrot.bunnytweaks.BunnyTweaks
+api-version: '1.20'

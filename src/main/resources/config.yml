@@ -1,0 +1,6 @@
+# Crafting Recipes
+Leather2Hide: true # 1 Leather craft to 4 rabbit hide
+Saddle: true # Craft-able Saddle with 5 leather
+
+# Other
+GiveRecipes: true # gives all recipes on join
