@@ -1,6 +1,10 @@
 # Crafting Recipes
 Leather2Hide: true # 1 Leather craft to 4 rabbit hide
-Saddle: true # Craft-able Saddle with 5 leather
+Wool2White: true # allows dyeing any wool white
+Flesh2Leather: true # 1 rotten flesh smelts into leather
+Gravel2Flint: true # 4 gravel crafts into 1 flint
+Saddle: true # Craft-able Saddle with 5 leather and 2 Iron
+Bundle: true # Craft bundle according to wiki recipe
 
 # Other
-GiveRecipes: true # gives all recipes on join
+GiveRecipes: true # gives ALL recipes on join

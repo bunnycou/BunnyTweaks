@@ -17,6 +17,9 @@ public final class BunnyTweaks extends JavaPlugin {
         if (config.getBoolean("GiveRecipes")) {
             getServer().getPluginManager().registerEvents(new JoinListener(), this);
         }
+        if (config.getBoolean("DisableInsomnia")) {
+            getServer().dispatchCommand(getServer().getConsoleSender(), "gamerule doInsomnia false");
+        }
 
         logger.info("[BunnyTweaks] Enabled");
     }
