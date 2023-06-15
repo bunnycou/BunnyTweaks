@@ -13,7 +13,18 @@ public class RecipeAdder extends JavaPlugin {
             new NamespacedKey("bunnytweaks", "rabbit_hide"),
             new ItemStack(Material.RABBIT_HIDE,4))
             .addIngredient(Material.LEATHER);
-
+    static ShapedRecipe HoneyPiston = new ShapedRecipe(
+            new NamespacedKey("bunnytweaks", "honeypiston"),
+            new ItemStack(Material.STICKY_PISTON, 1))
+            .shape("H","P")
+            .setIngredient('H', Material.HONEY_BOTTLE)
+            .setIngredient('P', Material.PISTON);
+    static ShapedRecipe HoneyLead = new ShapedRecipe(
+            new NamespacedKey("bunnytweaks", "honeylead"),
+            new ItemStack(Material.LEAD, 1))
+            .shape("SS ","SH ", "  S")
+            .setIngredient('H', Material.HONEY_BOTTLE)
+            .setIngredient('S', Material.STRING);
     static ShapedRecipe Saddle = new ShapedRecipe(
             new NamespacedKey("bunnytweaks", "saddle"),
             new ItemStack(Material.SADDLE, 1))
@@ -27,13 +38,13 @@ public class RecipeAdder extends JavaPlugin {
             .shape("SHS" ,"H H", "HHH")
             .setIngredient('S', Material.STRING)
             .setIngredient('H', Material.RABBIT_HIDE);
-    static RecipeChoice shovels = new RecipeChoice.MaterialChoice(
-            Material.WOODEN_SHOVEL,
-            Material.STONE_SHOVEL,
-            Material.IRON_SHOVEL,
-            Material.GOLDEN_SHOVEL,
-            Material.DIAMOND_SHOVEL,
-            Material.NETHERITE_SHOVEL);
+//    static RecipeChoice shovels = new RecipeChoice.MaterialChoice(
+//            Material.WOODEN_SHOVEL,
+//            Material.STONE_SHOVEL,
+//            Material.IRON_SHOVEL,
+//            Material.GOLDEN_SHOVEL,
+//            Material.DIAMOND_SHOVEL,
+//            Material.NETHERITE_SHOVEL);
     static ShapelessRecipe Gravel2Flint = new ShapelessRecipe(
             new NamespacedKey("bunnytweaks", "gravel_flint"),
             new ItemStack(Material.FLINT, 1))
@@ -66,12 +77,16 @@ public class RecipeAdder extends JavaPlugin {
             new NamespacedKey("bunnytweaks", "flesh_leather"),
             new ItemStack(Material.LEATHER, 1),
             Material.ROTTEN_FLESH, 0f, 200);
-
     public static void addRecipes(FileConfiguration config) {
         Server server = Bukkit.getServer();
 
         if (config.getBoolean("Leather2Hide")) {
             server.addRecipe(Leather2Hide);
+        }
+
+        if (config.getBoolean("HoneySlime")) {
+            server.addRecipe(HoneyPiston);
+            server.addRecipe(HoneyLead);
         }
 
         if (config.getBoolean("Saddle")) {

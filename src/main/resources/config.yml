@@ -5,6 +5,8 @@ Flesh2Leather: true # 1 rotten flesh smelts into leather
 Gravel2Flint: true # 4 gravel crafts into 1 flint
 Saddle: true # Craft-able Saddle with 5 leather and 2 Iron
 Bundle: true # Craft bundle according to wiki recipe
+HoneySlime: true # Use honey bottles as replacements for slime in sticky pistons and leads
 
 # Other
 GiveRecipes: true # gives ALL recipes on join
+DisableInsomnia: true # removes phantom spawns when true

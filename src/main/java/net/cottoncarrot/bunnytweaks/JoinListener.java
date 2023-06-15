@@ -13,7 +13,7 @@ public class JoinListener implements Listener {
     }
 
     private void giveRecipes(String user) {
-        BunnyTweaks.logger.info("Giving "+ user + " all recipes");
+        BunnyTweaks.logger.info("[BunnyTweaks] Giving "+ user + " all recipes");
         Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "recipe give " + user + " *");
     }
 }

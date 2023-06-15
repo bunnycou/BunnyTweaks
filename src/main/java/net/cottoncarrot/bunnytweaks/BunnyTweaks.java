@@ -10,6 +10,7 @@ public final class BunnyTweaks extends JavaPlugin {
     static Logger logger = Bukkit.getLogger();
     @Override
     public void onEnable() {
+        logger.info("[BunnyTweaks] Enabled");
         saveDefaultConfig();
 
         FileConfiguration config = getConfig();
@@ -20,8 +21,6 @@ public final class BunnyTweaks extends JavaPlugin {
         if (config.getBoolean("DisableInsomnia")) {
             getServer().dispatchCommand(getServer().getConsoleSender(), "gamerule doInsomnia false");
         }
-
-        logger.info("[BunnyTweaks] Enabled");
     }
 
     @Override
