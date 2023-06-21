@@ -2,3 +2,12 @@ name: BunnyTweaks
 version: '${project.version}'
 main: net.cottoncarrot.bunnytweaks.BunnyTweaks
 api-version: '1.20'
+commands:
+  seed:
+    description: Gets seed
+    usage: /seed
+    permission: bunnytweaks.seed
+permissions:
+  bunnytweaks.seed:
+    description: allows you to use /seed
+    default: true

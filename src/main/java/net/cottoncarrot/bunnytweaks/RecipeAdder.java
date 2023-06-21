@@ -9,6 +9,10 @@ import org.bukkit.inventory.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class RecipeAdder extends JavaPlugin {
+    static RecipeChoice honeyslime = new RecipeChoice.MaterialChoice(
+            Material.HONEY_BOTTLE,
+            Material.SLIME_BALL
+    );
     static ShapelessRecipe Leather2Hide = new ShapelessRecipe(
             new NamespacedKey("bunnytweaks", "rabbit_hide"),
             new ItemStack(Material.RABBIT_HIDE,4))
@@ -77,6 +81,13 @@ public class RecipeAdder extends JavaPlugin {
             new NamespacedKey("bunnytweaks", "flesh_leather"),
             new ItemStack(Material.LEATHER, 1),
             Material.ROTTEN_FLESH, 0f, 200);
+    static ShapedRecipe NoPhantoms = new ShapedRecipe(
+            new NamespacedKey("bunnytweaks", "membrane"),
+            new ItemStack(Material.PHANTOM_MEMBRANE, 1))
+            .shape("FSF")
+            .setIngredient('F', Material.FEATHER)
+            .setIngredient('S', honeyslime);
+
     public static void addRecipes(FileConfiguration config) {
         Server server = Bukkit.getServer();
 
@@ -107,6 +118,10 @@ public class RecipeAdder extends JavaPlugin {
 
         if (config.getBoolean("Gravel2Flint")) {
             server.addRecipe(Gravel2Flint);
+        }
+
+        if (config.getBoolean("NoPhantoms")) {
+            server.addRecipe(NoPhantoms);
         }
     }
 }

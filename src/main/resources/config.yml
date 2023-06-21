@@ -9,4 +9,5 @@ HoneySlime: true # Use honey bottles as replacements for slime in sticky pistons
 
 # Other
 GiveRecipes: true # gives ALL recipes on join
-DisableInsomnia: true # removes phantom spawns when true
+NoPhantoms: true # removes phantom spawns when true
+Seed: false # set to true to allow anybody to run /seed
